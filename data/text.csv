@@ -1,0 +1,508 @@
+Gene,Substrate
+"0    AAK1
+Name: Gene, dtype: object","0    AP2M1-T156 NUMB-T102
+Name: Substrate, dtype: object"
+"0    ABL1
+Name: Gene, dtype: object","0    WAS-Y291 ANXA1-Y21 ROBO1-Y1114 RAD52-Y104 CAT-...
+Name: Substrate, dtype: object"
+"0    ABL2
+Name: Gene, dtype: object","0    MAPT-Y394 LGALS3-Y118 ABL2-Y439 PSMA7-Y153 MAP...
+Name: Substrate, dtype: object"
+"0    AKT1
+Name: Gene, dtype: object","0    STK3-T117 MAP3K8-S400 VCP-S352 CREBBP-T1871 RU...
+Name: Substrate, dtype: object"
+"0    AKT2
+Name: Gene, dtype: object","0    GAPDH-T237 HIST1H3A-T45 PPIF-S31 CBY1-S20 EZR-...
+Name: Substrate, dtype: object"
+"0    AKT3
+Name: Gene, dtype: object","0    BRAF-S365 AGO2-S387 TBX3-S719 BRAF-S429
+Name: Substrate, dtype: object"
+"0    ALK
+Name: Gene, dtype: object","0    SRCIN1-Y396 ALK-Y1278 SFPQ-Y293 ATIC-Y104 VASP...
+Name: Substrate, dtype: object"
+"0    ARAF
+Name: Gene, dtype: object","0    BAD-S99 MAP2K1-S218 MAP2K1-S222 BAD-S118 SLC9A...
+Name: Substrate, dtype: object"
+"0    ATM
+Name: Gene, dtype: object","0    FANCD2-T691 MED1-S1141 WHSC1-S102 MAD1L1-S214 ...
+Name: Substrate, dtype: object"
+"0    ATR
+Name: Gene, dtype: object","0    MDC1-S513 EWSR1-T79 SIAH1-S19 CCDC82-S154 BORA...
+Name: Substrate, dtype: object"
+"0    BAZ1B
+Name: Gene, dtype: object","0    H2AFX-Y142
+Name: Substrate, dtype: object"
+"0    BCR
+Name: Gene, dtype: object","0    YWHAQ-S232 YWHAZ-T232 MLLT4-T909
+Name: Substrate, dtype: object"
+"0    BLK
+Name: Gene, dtype: object","0    FCGR2A-Y304 FCGR2C-Y310 FCGR2B-Y292 FCGR2A-Y288
+Name: Substrate, dtype: object"
+"0    BLVRA
+Name: Gene, dtype: object","0    BLVRA-Y83 BLVRA-Y72 PRKCB-T500
+Name: Substrate, dtype: object"
+"0    BMPR1B
+Name: Gene, dtype: object","0    SMAD1-S465 SMAD1-S462 SMAD2-S467 SMAD2-S464 SM...
+Name: Substrate, dtype: object"
+"0    BMX
+Name: Gene, dtype: object","0    FGFR1-Y654 PTK2-Y925 PTK2-Y742 FGFR1-Y653 PTK2...
+Name: Substrate, dtype: object"
+"0    BRAF
+Name: Gene, dtype: object","0    TTK-S436 BAD-S99 MAP2K2-S222 BAD-S134 EEF1A1-T...
+Name: Substrate, dtype: object"
+"0    BRD4
+Name: Gene, dtype: object","0    POLR2A-S1616
+Name: Substrate, dtype: object"
+"0    BRSK1
+Name: Gene, dtype: object","0    TUBG1-S131 TUBG1-S385 TUBG1-S131 BRSK1-T205 PR...
+Name: Substrate, dtype: object"
+"0    BRSK2
+Name: Gene, dtype: object","0    CDK16-S12 PRKAA1-T183
+Name: Substrate, dtype: object"
+"0    BTK
+Name: Gene, dtype: object","0    PLCG2-Y753 GTF2I-Y357 TEC-Y206 TIRAP-Y106 BTK-...
+Name: Substrate, dtype: object"
+"0    BUB1
+Name: Gene, dtype: object","0    BUB3-S19 BUB1-S198 BUB1-S525 BUB1-S752 BUB1-S1...
+Name: Substrate, dtype: object"
+"0    CASK
+Name: Gene, dtype: object","0    NRXN1-S428 CASK-S155 NRXN1-S424 CASK-S151 NRXN...
+Name: Substrate, dtype: object"
+"0    CDC7
+Name: Gene, dtype: object","0    MCM2-S7 CLSPN-S265 CLSPN-S744 MCM2-S5 CLSPN-S1...
+Name: Substrate, dtype: object"
+"0    CDK10
+Name: Gene, dtype: object","0    ETS2-S220 ETS2-S225
+Name: Substrate, dtype: object"
+"0    CDK19
+Name: Gene, dtype: object","0    EIF3F-S46 PAK1-S174 EIF3F-T119
+Name: Substrate, dtype: object"
+"0    CDK2
+Name: Gene, dtype: object","0    SNAPIN-S133 SUPT6H-T1523 NR1I2-S350 FOXC1-T68 ...
+Name: Substrate, dtype: object"
+"0    CDK3
+Name: Gene, dtype: object","0    RB1-S811 RB1-S807 CABLES1-S313 JUN-S63 TFCP2-S...
+Name: Substrate, dtype: object"
+"0    CDK4
+Name: Gene, dtype: object","0    FOXM1-T611 EGLN2-S130 FOXM1-S508 BRCA1-S632 FO...
+Name: Substrate, dtype: object"
+"0    CDK5
+Name: Gene, dtype: object","0    BACE1-T252 MEF2D-S444 PXN-S85 MAPT-T231 HTT-S1...
+Name: Substrate, dtype: object"
+"0    CDK6
+Name: Gene, dtype: object","0    RUNX1-S293 RB1-S788 FOXM1-T627 FOXM1-T620 RB1-...
+Name: Substrate, dtype: object"
+"0    CDK7
+Name: Gene, dtype: object","0    E2F1-S403 TP53-S376 E2F1-T433 CDK2-T160 POLR2A...
+Name: Substrate, dtype: object"
+"0    CDK8
+Name: Gene, dtype: object","0    SMAD3-T179 CCNH-S304 SMAD1-S206 HIST1H3A-S10 C...
+Name: Substrate, dtype: object"
+"0    CDK9
+Name: Gene, dtype: object","0    TP53-S315 POLR2A-T1618 NCOA2-S493 CDK9-T354 RB...
+Name: Substrate, dtype: object"
+"0    CDKL5
+Name: Gene, dtype: object","0    LRRC4C-S631 CDKL5-Y171 CDKL5-T169
+Name: Substrate, dtype: object"
+"0    CLK1
+Name: Gene, dtype: object","0    PTPN1-S242 PTPN1-S50 RBM17-S62 RBM17-S204 RBM1...
+Name: Substrate, dtype: object"
+"0    CLK2
+Name: Gene, dtype: object","0    PTPN1-S243 PTPN1-S242 PTPN1-S50
+Name: Substrate, dtype: object"
+"0    CLK4
+Name: Gene, dtype: object","0    ABL1-T735
+Name: Substrate, dtype: object"
+"0    CSK
+Name: Gene, dtype: object","0    LCK-Y505 SRC-Y530 YES1-Y537 PTPRC-Y1216
+Name: Substrate, dtype: object"
+"0    DAPK1
+Name: Gene, dtype: object","0    MYL12B-S20 BECN1-T119 TP53-T18 TP53-S20 PIN1-S...
+Name: Substrate, dtype: object"
+"0    DAPK2
+Name: Gene, dtype: object","0    DAPK2-S318
+Name: Substrate, dtype: object"
+"0    DAPK3
+Name: Gene, dtype: object","0    TP53-S20 DAPK3-T306 MDM2-S166 RPL13A-S77 DAPK3...
+Name: Substrate, dtype: object"
+"0    DYRK1A
+Name: Gene, dtype: object","0    SNCA-S87 AMPH-T310 POLR2A-S1616 DYRK1A-S529 MA...
+Name: Substrate, dtype: object"
+"0    DYRK1B
+Name: Gene, dtype: object","0    ID2-T27 H3F3A-T45 SF3B1-T434 HNF1A-S249 CDKN1A...
+Name: Substrate, dtype: object"
+"0    DYRK2
+Name: Gene, dtype: object","0    MAPT-T212 DPYSL2-S522 DPYSL3-S522 KATNA1-T133 ...
+Name: Substrate, dtype: object"
+"0    DYRK3
+Name: Gene, dtype: object","0    H3F3A-T45 AKT1S1-T246
+Name: Substrate, dtype: object"
+"0    EGFR
+Name: Gene, dtype: object","0    GSTP1-Y8 VAV2-Y142 GPRC5A-Y320 SHC1-Y194 SHC1-...
+Name: Substrate, dtype: object"
+"0    FAM20C
+Name: Gene, dtype: object","0    FGF23-S180
+Name: Substrate, dtype: object"
+"0    FER
+Name: Gene, dtype: object","0    EZR-Y478 AR-Y225 EZR-Y354 NSF-Y83 STAT3-Y705 F...
+Name: Substrate, dtype: object"
+"0    FES
+Name: Gene, dtype: object","0    NSF-Y83 FES-Y713 BCR-Y246 FES-Y811
+Name: Substrate, dtype: object"
+"0    FGFR1
+Name: Gene, dtype: object","0    PDK1-Y136 ZMYM2-Y729 FGFR1-Y730 PDK1-Y244 PDK1...
+Name: Substrate, dtype: object"
+"0    FGFR2
+Name: Gene, dtype: object","0    FGFR2-Y769 PTEN-Y240 CTNNB1-Y142
+Name: Substrate, dtype: object"
+"0    FGFR3
+Name: Gene, dtype: object","0    FGFR3-Y724 CTNNB1-Y142 PTEN-Y240 RPS6KA3-Y529 ...
+Name: Substrate, dtype: object"
+"0    FGFR4
+Name: Gene, dtype: object","0    FGFR4-Y754
+Name: Substrate, dtype: object"
+"0    FGR
+Name: Gene, dtype: object","0    PTK2-Y576 PTK2-Y397 PTK2-Y925
+Name: Substrate, dtype: object"
+"0    FLT1
+Name: Gene, dtype: object","0    FLT1-Y1327 FLT1-Y1169 FLT1-Y1242 FLT1-Y1213 FL...
+Name: Substrate, dtype: object"
+"0    FLT3
+Name: Gene, dtype: object","0    FLT3-Y726 FLT3-Y955 FLT3-Y969 FLT3-Y591 FLT3-Y...
+Name: Substrate, dtype: object"
+"0    FRK
+Name: Gene, dtype: object","0    BRCA1-Y1552 PTEN-Y336
+Name: Substrate, dtype: object"
+"0    FYN
+Name: Gene, dtype: object","0    AGAP2-Y774 CLIC5-Y33 FUS-Y526 CD226-Y322 PROM1...
+Name: Substrate, dtype: object"
+"0    GSK3A
+Name: Gene, dtype: object","0    BCL3-S402 MAPT-T231 LRP6-S1544 GSK3A-Y279 CTNN...
+Name: Substrate, dtype: object"
+"0    GSK3B
+Name: Gene, dtype: object","0    HRAS-T144 NFKB2-S707 PRKCE-S346 CABYR-S155 NFK...
+Name: Substrate, dtype: object"
+"0    GTF2F1
+Name: Gene, dtype: object","0    GTF2F1-S385 RARG-S79 RARG-S77 GTF2F1-T389
+Name: Substrate, dtype: object"
+"0    HCK
+Name: Gene, dtype: object","0    HCK-Y522 ABL1-Y172 ABL1-Y215 ABL1-Y115 ABL1-Y1...
+Name: Substrate, dtype: object"
+"0    HIPK1
+Name: Gene, dtype: object","0    PAGE4-T51
+Name: Substrate, dtype: object"
+"0    HIPK2
+Name: Gene, dtype: object","0    KLF3-S71 HMGA1-T53 KLF3-S111 KLF3-S224 PML-S8 ...
+Name: Substrate, dtype: object"
+"0    ICK
+Name: Gene, dtype: object","0    BAG6-T1080 RPTOR-T908
+Name: Substrate, dtype: object"
+"0    IGF1R
+Name: Gene, dtype: object","0    PDPK1-Y376 SIRPA-Y470 PDPK1-Y373 IGF1R-S982 SI...
+Name: Substrate, dtype: object"
+"0    ILK
+Name: Gene, dtype: object","0    PPP1R14A-T38 NACA-S1906 MYL12B-T19 PPP1R14B-T5...
+Name: Substrate, dtype: object"
+"0    INSR
+Name: Gene, dtype: object","0    GAB1-Y447 INSR-S1348 PIK3R3-Y341 BLVRA-Y291 GA...
+Name: Substrate, dtype: object"
+"0    IRAK1
+Name: Gene, dtype: object","0    PELI1-T127 PELI2-T290 IRAK1-T209 PELI1-S293 PE...
+Name: Substrate, dtype: object"
+"0    IRAK4
+Name: Gene, dtype: object","0    NCF1-T133 PELI1-T288 NCF1-S345 NCF1-T138 IRAK4...
+Name: Substrate, dtype: object"
+"0    ITK
+Name: Gene, dtype: object","0    PLCG1-Y783 SIGLEC10-Y597 ITK-Y180 DEF6-Y222 SI...
+Name: Substrate, dtype: object"
+"0    JAK1
+Name: Gene, dtype: object","0    STAT1-Y701 MAP3K5-Y718
+Name: Substrate, dtype: object"
+"0    JAK2
+Name: Gene, dtype: object","0    PAK1-Y201 MAPK1-Y187 JAK2-Y119 SOCS3-Y221 GRB2...
+Name: Substrate, dtype: object"
+"0    JAK3
+Name: Gene, dtype: object","0    NFATC1-Y371 ELAVL1-Y63 JAK1-Y1035 SIGLEC10-Y59...
+Name: Substrate, dtype: object"
+"0    KDR
+Name: Gene, dtype: object","0    PFN1-Y129 KDR-Y1175 KDR-Y1054 KDR-Y1059 KDR-Y9...
+Name: Substrate, dtype: object"
+"0    KIT
+Name: Gene, dtype: object","0    KIT-Y553 KIT-Y703 KIT-Y570 LAT2-Y110 KIT-Y721 ...
+Name: Substrate, dtype: object"
+"0    KSR1
+Name: Gene, dtype: object","0    RAF1-T269
+Name: Substrate, dtype: object"
+"0    LATS1
+Name: Gene, dtype: object","0    YAP1-S127 YAP1-S164 LATS1-S1049 YAP1-S109 YAP1...
+Name: Substrate, dtype: object"
+"0    LATS2
+Name: Gene, dtype: object","0    SNAI1-T203 YAP1-S127 YAP1-S127 AMOT-S175 KIF23...
+Name: Substrate, dtype: object"
+"0    LCK
+Name: Gene, dtype: object","0    PLCG2-Y1217 PECAM1-Y713 ZAP70-Y474 IL2RB-Y384 ...
+Name: Substrate, dtype: object"
+"0    LIMK1
+Name: Gene, dtype: object","0    DSTN-S3 CFL1-S3
+Name: Substrate, dtype: object"
+"0    LIMK2
+Name: Gene, dtype: object","0    DSTN-S3 CFL1-S3
+Name: Substrate, dtype: object"
+"0    LRRK1
+Name: Gene, dtype: object","0    CDK5RAP2-T102 CDK5RAP2-S140
+Name: Substrate, dtype: object"
+"0    LRRK2
+Name: Gene, dtype: object","0    LRRK2-S1457 LRRK2-T1503 LRRK2-T1348 AKT1-S473 ...
+Name: Substrate, dtype: object"
+"0    LYN
+Name: Gene, dtype: object","0    LAT2-Y119 NMT1-Y180 CDK4-Y17 AKAP8-Y436 HCLS1-...
+Name: Substrate, dtype: object"
+"0    MAP2K1
+Name: Gene, dtype: object","0    MAPK1-Y187 TAL1-S122 MAPK3-T202 MAPK3-T207 MAP...
+Name: Substrate, dtype: object"
+"0    MAP2K2
+Name: Gene, dtype: object","0    MAPK3-Y204 KRT8-S74 MAPK3-T202
+Name: Substrate, dtype: object"
+"0    MAP2K3
+Name: Gene, dtype: object","0    MAP2K3-S218 MAP2K3-T222 MAPK14-Y182 MAPK14-T180
+Name: Substrate, dtype: object"
+"0    MAP2K4
+Name: Gene, dtype: object","0    MAP2K4-S257 MAPK8-S377 MAPK8-T183 MAP2K4-T261 ...
+Name: Substrate, dtype: object"
+"0    MAP2K5
+Name: Gene, dtype: object","0    MAPK7-Y221 MAPK7-T219
+Name: Substrate, dtype: object"
+"0    MAP2K6
+Name: Gene, dtype: object","0    MAPK14-Y182 MAPK12-Y185 MAP2K6-S207 HSF4-T471 ...
+Name: Substrate, dtype: object"
+"0    MAP2K7
+Name: Gene, dtype: object","0    MAPK8-Y185 MAPK9-T183 MAPK9-T404 MAPK10-T221 M...
+Name: Substrate, dtype: object"
+"0    MAP3K1
+Name: Gene, dtype: object","0    MAFA-S65 MAP2K7-S271 MAFA-S14 MAP2K7-T275 FADD...
+Name: Substrate, dtype: object"
+"0    MAP3K3
+Name: Gene, dtype: object","0    RCAN1-S163 RCAN1-S167
+Name: Substrate, dtype: object"
+"0    MAP3K4
+Name: Gene, dtype: object","0    MAP3K4-T1494
+Name: Substrate, dtype: object"
+"0    MAP3K5
+Name: Gene, dtype: object","0    MAP2K4-T261 CDKN1A-S98 MAP3K5-T813 PDPK1-S398 ...
+Name: Substrate, dtype: object"
+"0    MAP3K6
+Name: Gene, dtype: object","0    MAPK14-Y182 MAPK8-Y185 MAPK14-T180 MAP3K6-T806...
+Name: Substrate, dtype: object"
+"0    MAP3K7
+Name: Gene, dtype: object","0    PTPN3-S359 TAB1-S457 MAP3K7-T178 HDAC5-S259 E2...
+Name: Substrate, dtype: object"
+"0    MAPKAPK2
+Name: Gene, dtype: object","0    HSPB1-S78 CDC25B-S169 CEP131-S47 LIMK1-S323 TH...
+Name: Substrate, dtype: object"
+"0    MAPKAPK3
+Name: Gene, dtype: object","0    BECN1-S90
+Name: Substrate, dtype: object"
+"0    MAPKAPK5
+Name: Gene, dtype: object","0    RHEB-S130 TH-S40 DNAJB1-S151 8-SEP-S163 TP53-S...
+Name: Substrate, dtype: object"
+"0    MARK1
+Name: Gene, dtype: object","0    MAPT-S422 MAPT-T231 MAPT-S356 MAPT-S320 MAPT-S...
+Name: Substrate, dtype: object"
+"0    MARK2
+Name: Gene, dtype: object","0    ARHGEF2-S186 KIF13B-S1410 ARHGEF2-S172 RAB11FI...
+Name: Substrate, dtype: object"
+"0    MARK3
+Name: Gene, dtype: object","0    MARK3-S601 MARK3-S598 MARK3-S606 MARK3-T602 PP...
+Name: Substrate, dtype: object"
+"0    MELK
+Name: Gene, dtype: object","0    CDC25B-S169 MELK-Y367 MELK-S391 MELK-S343 MELK...
+Name: Substrate, dtype: object"
+"0    MET
+Name: Gene, dtype: object","0    MST1R-Y1239 MET-Y1235 PTK2-Y5 PARP1-Y907 SHC1-...
+Name: Substrate, dtype: object"
+"0    MOS
+Name: Gene, dtype: object","0    VIM-S459 VIM-T458
+Name: Substrate, dtype: object"
+"0    MYO3A
+Name: Gene, dtype: object","0    MYO3A-T919 MYO3A-T184 MYO3A-T908 MYO3A-T178
+Name: Substrate, dtype: object"
+"0    NEK1
+Name: Gene, dtype: object","0    VDAC1-S193 VHL-T105 VHL-Y175 VHL-T202 VHL-S168...
+Name: Substrate, dtype: object"
+"0    NEK11
+Name: Gene, dtype: object","0    CDC25A-S88 CDC25A-S79 BLM-S338 CDC25A-S82
+Name: Substrate, dtype: object"
+"0    NEK2
+Name: Gene, dtype: object","0    CEP250-S2421 SGOL1-S14 NPM1-S88 CNTROB-S41 NPM...
+Name: Substrate, dtype: object"
+"0    NEK6
+Name: Gene, dtype: object","0    RPS6KB1-T412 CDK7-S161 NUP98-S591 SGK1-S422 RB...
+Name: Substrate, dtype: object"
+"0    NEK9
+Name: Gene, dtype: object","0    NEK9-T210 NEK6-S206 NEK9-S944 NEDD1-S377 NEK7-...
+Name: Substrate, dtype: object"
+"0    NLK
+Name: Gene, dtype: object","0    RPTOR-S863 LEF1-S166 SMAD4-S138 TCF7L2-T212 LE...
+Name: Substrate, dtype: object"
+"0    PAK1
+Name: Gene, dtype: object","0    FLNA-S2152 SNAI1-S246 PAK1-S199 FLNA-S2292 PGM...
+Name: Substrate, dtype: object"
+"0    PAK2
+Name: Gene, dtype: object","0    PXN-S272 PAK2-T402 ABL1-S618 JUN-T93 JUN-T2 PR...
+Name: Substrate, dtype: object"
+"0    PAK4
+Name: Gene, dtype: object","0    ITGB5-S762 CTNNB1-S675 ITGB5-S759 PXN-S272 ARH...
+Name: Substrate, dtype: object"
+"0    PAK6
+Name: Gene, dtype: object","0    PACSIN1-S346 MDM2-T158 LIMK1-T508 MDM2-S186 AR...
+Name: Substrate, dtype: object"
+"0    PASK
+Name: Gene, dtype: object","0    EEF1A1-T432 PASK-T1161 PASK-T1165
+Name: Substrate, dtype: object"
+"0    PBK
+Name: Gene, dtype: object","0    PRDX1-S32 GPSM2-T457 JUN-S63 HIST1H3A-S10 JUN-S73
+Name: Substrate, dtype: object"
+"0    PDK1
+Name: Gene, dtype: object","0    PDHA2-S291 PDHA2-S230 PDHA1-S293 PDHA1-S300 PD...
+Name: Substrate, dtype: object"
+"0    PIM1
+Name: Gene, dtype: object","0    FOXP3-S422 POU5F1-S288 MDM2-S166 MARK3-T90 ABC...
+Name: Substrate, dtype: object"
+"0    PIM2
+Name: Gene, dtype: object","0    PKM-T454 CDKN1A-T145 CDKN1A-S146
+Name: Substrate, dtype: object"
+"0    PIM3
+Name: Gene, dtype: object","0    BAD-S75
+Name: Substrate, dtype: object"
+"0    PINK1
+Name: Gene, dtype: object","0    PARK2-S65 PINK1-S402 PINK1-T257 PINK1-S228 UBA...
+Name: Substrate, dtype: object"
+"0    PKN1
+Name: Gene, dtype: object","0    CLIP1-S312 HIST1H3A-T11 HDAC5-T292 EGFR-T678 H...
+Name: Substrate, dtype: object"
+"0    PKN3
+Name: Gene, dtype: object","0    CLIP1-S312 EGFR-T678
+Name: Substrate, dtype: object"
+"0    PLK1
+Name: Gene, dtype: object","0    PCNT-S1235 MAP2K1-S222 VIM-S83 SVIL-S238 FOXM1...
+Name: Substrate, dtype: object"
+"0    PLK2
+Name: Gene, dtype: object","0    CALU-T60 FBXW7-S349 FBXW7-S176 NPM1-S4 SNCB-S1...
+Name: Substrate, dtype: object"
+"0    PLK3
+Name: Gene, dtype: object","0    NPM1-S4 PTEN-T366 CALU-T177 HIF1A-S657 CALU-T6...
+Name: Substrate, dtype: object"
+"0    PLK4
+Name: Gene, dtype: object","0    FBXW5-S151 PCM1-S372 PLK4-Y177 PLK4-S22 PLK4-S...
+Name: Substrate, dtype: object"
+"0    PRKX
+Name: Gene, dtype: object","0    PKD1-S4166 SMAD6-S435
+Name: Substrate, dtype: object"
+"0    RAF1
+Name: Gene, dtype: object","0    BAD-S75 KLF10-T93 BAD-S118 RAF1-S621 MAP2K1-S2...
+Name: Substrate, dtype: object"
+"0    RET
+Name: Gene, dtype: object","0    RET-Y687 RET-Y586 PLCG1-Y783 MAPK8-Y185 AFAP1L...
+Name: Substrate, dtype: object"
+"0    RIOK3
+Name: Gene, dtype: object","0    IFIH1-S828
+Name: Substrate, dtype: object"
+"0    RIPK1
+Name: Gene, dtype: object","0    RIPK1-S15 RIPK1-S166 RIPK1-S20 DAB2IP-S728 RIP...
+Name: Substrate, dtype: object"
+"0    RIPK2
+Name: Gene, dtype: object","0    RIPK2-Y474 RIPK2-S176
+Name: Substrate, dtype: object"
+"0    RIPK3
+Name: Gene, dtype: object","0    MLKL-S358 MLKL-T357 DAXX-S668
+Name: Substrate, dtype: object"
+"0    ROCK1
+Name: Gene, dtype: object","0    PPP1R12A-T696 PPP1R12A-S852 MAPK8IP3-S365 DAPK...
+Name: Substrate, dtype: object"
+"0    ROCK2
+Name: Gene, dtype: object","0    PPP1R12A-T696 EEF1A1-T432 PPP1R14B-T57 CNN3-S2...
+Name: Substrate, dtype: object"
+"0    SGK1
+Name: Gene, dtype: object","0    NDRG1-T328 NDRG1-T366 NDRG1-T346 APBB1-S610 HT...
+Name: Substrate, dtype: object"
+"0    SGK3
+Name: Gene, dtype: object","0    ITCH-T385 FLII-S436 FLII-T818 ITCH-S450 GSK3B-S9
+Name: Substrate, dtype: object"
+"0    SMG1
+Name: Gene, dtype: object","0    TP53-S15 UPF1-S1107 UPF1-S1084 UPF1-T28 UPF1-S...
+Name: Substrate, dtype: object"
+"0    SRC
+Name: Gene, dtype: object","0    SRC-Y338 ARAF-Y301 CDK1-Y15 CHKA-Y333 HNF4A-Y2...
+Name: Substrate, dtype: object"
+"0    SRPK1
+Name: Gene, dtype: object","0    RBM8A-S166 SRPK1-S587 SRSF1-S205 SRSF1-S227 SR...
+Name: Substrate, dtype: object"
+"0    SRPK2
+Name: Gene, dtype: object","0    ACIN1-S1180
+Name: Substrate, dtype: object"
+"0    SYK
+Name: Gene, dtype: object","0    SHC1-Y240 SLC4A1-Y359 CBL-Y700 LCP2-Y128 PIP5K...
+Name: Substrate, dtype: object"
+"0    TAF1
+Name: Gene, dtype: object","0    GTF2A1-S316 TAF7-S264 TP53-T55 GTF2A1-S321
+Name: Substrate, dtype: object"
+"0    TBK1
+Name: Gene, dtype: object","0    IRF3-S385 OPTN-S513 IRF3-S402 PELI1-S76 IRF7-S...
+Name: Substrate, dtype: object"
+"0    TEC
+Name: Gene, dtype: object","0    BMX-Y216 TEC-Y206 PTPN18-Y354 PTPN18-Y303 PTPN...
+Name: Substrate, dtype: object"
+"0    TESK1
+Name: Gene, dtype: object","0    CFL1-S3
+Name: Substrate, dtype: object"
+"0    TLK1
+Name: Gene, dtype: object","0    HIST1H3A-S10 RAD9A-T355 RAD9A-S328
+Name: Substrate, dtype: object"
+"0    TLK2
+Name: Gene, dtype: object","0    ASF1A-S192 ASF1B-S198
+Name: Substrate, dtype: object"
+"0    TNIK
+Name: Gene, dtype: object","0    TCF7L2-S177
+Name: Substrate, dtype: object"
+"0    TSSK4
+Name: Gene, dtype: object","0    CREB1-S133
+Name: Substrate, dtype: object"
+"0    TTBK1
+Name: Gene, dtype: object","0    MAPT-S416 MAPT-S422 MAPT-Y197 MAPT-T427 MAPT-S...
+Name: Substrate, dtype: object"
+"0    TTBK2
+Name: Gene, dtype: object","0    SV2A-S42 SV2A-S45 SV2A-S81 SV2A-S80 SV2A-S47 K...
+Name: Substrate, dtype: object"
+"0    TTK
+Name: Gene, dtype: object","0    TTK-S15 BUB1B-S670 TTK-T360 TTK-T676 TTK-S821 ...
+Name: Substrate, dtype: object"
+"0    TXK
+Name: Gene, dtype: object","0    TXK-Y420 TXK-Y91
+Name: Substrate, dtype: object"
+"0    TYK2
+Name: Gene, dtype: object","0    IFNAR1-Y466 SIVA1-Y53 TYK2-Y1055 SIVA1-Y162 TY...
+Name: Substrate, dtype: object"
+"0    ULK1
+Name: Gene, dtype: object","0    RPTOR-S859 ATG9A-S761 TMEM173-S366 ATG13-S355 ...
+Name: Substrate, dtype: object"
+"0    ULK2
+Name: Gene, dtype: object","0    DENND3-S490 DENND3-S472
+Name: Substrate, dtype: object"
+"0    ULK3
+Name: Gene, dtype: object","0    ULK3-S300 ULK3-S384 ULK3-S350 ULK3-S464
+Name: Substrate, dtype: object"
+"0    VRK1
+Name: Gene, dtype: object","0    ATF2-T73 COIL-S184 JUN-S73 TP53-T18 ATF2-S62 H...
+Name: Substrate, dtype: object"
+"0    VRK2
+Name: Gene, dtype: object","0    BANF1-T3 BANF1-S4 BANF1-T2 USP25-T727 USP25-T6...
+Name: Substrate, dtype: object"
+"0    VRK3
+Name: Gene, dtype: object","0    BANF1-S4
+Name: Substrate, dtype: object"
+"0    ZAK
+Name: Gene, dtype: object","0    ZAK-T162 ZAK-T161 HIST1H3A-S28 CHEK2-T68 ZAK-S165
+Name: Substrate, dtype: object"
+"0    ZAP70
+Name: Gene, dtype: object","0    GAB2-Y614 ZAP70-Y292 LCP2-Y113 LCP2-Y128 ZAP70...
+Name: Substrate, dtype: object"

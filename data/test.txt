@@ -1,0 +1,3 @@
+Select,Gene,Species,Classification,Alias
+,AKT1,Human,AGC 	 : Akt,"MGC99656, RAC, RAC-ALPHA, PRKBA, Akt, PKB, AKT1, c-Akt, PKBalpha"
+,AKT2,Human,AGC 	 : Akt,"PRKBB, AKT2, RAC-BETA, PKBBETA"
