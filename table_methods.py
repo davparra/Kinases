@@ -1,58 +1,67 @@
-from table import table
 import pandas as pd
+
+pd.options.mode.chained_assignment = None  # default='warn'
 
 #TODO: Think about what other functionality would be useful
 #TODO: Clean up code
-def merge_tables(columns, table1, table2, output_folder, join='inner'):
+#TODO: drop_columns function
+def merge_dataframes(columns, df1, df2, join='inner'):
     #merge 2 dataframes based on a column or columns
     #join method can be specified: {‘left’, ‘right’, ‘outer’, ‘inner’}
     #default join value is ‘inner’
     #check that both tables are not empty
-    tmp = pd.DataFrame()
-    table1.dataframe[columns] = table1.dataframe[columns].astype(str)
-    table2.dataframe[columns] = table2.dataframe[columns].astype(str)
+    new_dataframe = pd.DataFrame()
+    df1[columns] = df1[columns].astype(str)
+    df2[columns] = df2[columns].astype(str)
 
-    print(table2.dataframe[columns].dtype)
-
-    if not table1.dataframe.empty and not table2.dataframe.empty:
+    if not df1.empty and not df2.empty:
         try:
-            tmp = pd.merge(table1.dataframe, table2.dataframe, on=columns, how=join)
+            new_dataframe = pd.merge(df1, df2, on=columns, how=join)
         except:
             print('An exception ocurred.')
     else:
         print('A table is empty')
 
-    new_table = table().initialize_from_dataframe(tmp)
+    colnames = new_dataframe.columns.tolist()
+    colnames = colnames[-1:] + colnames[:-1]
+    new_dataframe = new_dataframe[colnames]
 
-    new_table.dataframe.to_csv(output_folder + '/matched_phosphorylation_data.csv', sep='\t', index=False)
+    return new_dataframe
+    #new_dataframe.to_csv(output_folder + '/matched_phosphorylation_data.csv', sep='\t', index=False)
 
-
-    return new_table
-
-def merge_columns(df, columns, col_name, sep):
+def merge_columns(dataframe, columns, col_name, sep):
     #returns a new table that is a copy of the old table plus a column
     #produced by the columns merged
-    print(df[columns].values)
-    df[col_name] = df[columns].apply(lambda x: sep.join(x), axis=1)
-    print(df[col_name])
-    return table().initialize_from_dataframe(df)
+    dataframe[col_name] = dataframe[columns].apply(lambda x: sep.join(x), axis=1)
+    dataframe = dataframe.drop(columns, axis=1)
+    colnames = dataframe.columns.tolist()
+    colnames = colnames[-1:] + colnames[:-1]
+    dataframe = dataframe[colnames]
+
+    return dataframe
 
 '''
-def merge_rows():
-    pass
-
-def match_tables(columns):
-    #returns a table containing the rows of that matched on the column
+def merge_rows_by_avg(dataframe, oncolumn, withcolumn):
+    df = dataframe.groupby(oncolumn)[withcolumn].apply(' '.join).reset_index()
+    print(df.columns)
     pass
 '''
-
-
 
 def strip_column(dataframe, column, char):
     #removes character char from all entries in column
     dataframe[column] = dataframe[column].str.strip(char)
 
+def strip_last_char(dataframe, column):
+    #TODO: fix parsing of col: variableSites
+    #removes last character from all entries in a column
+    dataframe[column] = dataframe[column].apply(lambda row: row[:-1])
+
+    return dataframe
+
 def split_column(dataframe, column, char):
     #splits the entries of a column if the entry is a list divided by a character char
     dataframe[column] = dataframe[column].str.split(char)
+    #remove empty items from list
+    dataframe[column] = dataframe[column].apply(lambda row: [x for x in row if x != ''])
+
     return dataframe

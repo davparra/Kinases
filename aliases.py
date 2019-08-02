@@ -1,24 +1,24 @@
 #TODO: optimize code
-#TODO: fix table name stuff
+#TODO: add column name flexibility
 import pandas as pd
 
-def rename_gene_to_original(substrates, aliases, output_folder,verbose=0):
+def rename_gene_to_original(merged_data, aliases, output_folder, verbose=0):
     #for each gene in the sub table, check if the name matches the genes in info table
     #if found then go to the next one
     #if not then look into the aliases of each gene
     # if found then rename gene
     #if not then go to the next one
-    COL = list(substrates.dataframe)
+    COL = list(merged_data)
 
     df = pd.DataFrame(columns=COL)
     gene_list = pd.DataFrame(columns=['Kinase'])
     gene_count = 0
 
-    for index, row in substrates.dataframe.iterrows():
+    for index, row in merged_data.iterrows():
         gene = row['Kinase']
-        if aliases.dataframe[aliases.dataframe['Gene'] == gene].empty:
+        if aliases[aliases['Gene'] == gene].empty:
             #look into the aliases
-            for index, item in aliases.dataframe.iterrows():
+            for index, item in aliases.iterrows():
                 in_alias = gene in item['Alias']
                 if in_alias:
                     if verbose==1:
@@ -48,6 +48,6 @@ def rename_gene_to_original(substrates, aliases, output_folder,verbose=0):
         print(len(gene_list))
 
     #output table to text file for easier use
-    df.to_csv(output_folder + '/matched_sub_data.csv', sep='\t', index=False)
+    #df.to_csv(output_folder + '/matched_sub_data.csv', sep='\t', index=False)
     gene_list.to_csv(output_folder + '/matched_gene_list.csv', sep='\t', index=False)
     return df, gene_list

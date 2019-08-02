@@ -1,5 +1,5 @@
 #import data_prep as dp
-from table import table
+from old.table import table
 import pandas as pd
 
 def main():

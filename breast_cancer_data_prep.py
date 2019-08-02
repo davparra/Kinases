@@ -1,137 +1,90 @@
-from table import table
 from aliases import rename_gene_to_original
-from table_methods import merge_tables, split_column, strip_column, merge_columns
+from table_methods import merge_dataframes, strip_last_char
 from distance_matrix import compute_dist_matrix_from_file
 from sequence_match import match_seq_to_gene_list
 from excel import export_xl_page_to_csv
-import re
 import pandas as pd
+import data_prep as dp
 
-#TODO: add notes about the steps of preparing the data
-#TODO: remove unnecessary functions
+#TODO: rewrite the steps to match the main function
+'''
+1.  Export page from Excel file
+2.  Output as csv to speed up the reading
+3.  Remove rows with multisites
+4.  Strip last character from sites
+5.  Delete rows with fewer samples
+6.  Average nan values on each row
+5.  Remove genes with less than 2 substrates
+7.  Match to sequence data
+8.  Compute distance matrix
+9.  Prepare table for Kmeans
+'''
 
 def main():
     print('Starto')
+    folder = 'breast_cancer_data'
+    xl_path = 'ddata/BreastCancerData.xlsx'
+    xl_output = 'Phosphorylation'
+    xl_page = 'data'
+    ksa_path = 'ddata/KSA_human.txt'
     sub_path = 'breast_cancer_data/Phosphosite.csv'
     info_path = 'data/kinase_info.csv'
-    bc_path = 'breast_cancer_data/BreastCancerData.csv'
-    phospho_path = 'breast_cancer_data/Phosphorylation_data.csv'
-    p_path = 'breast_cancer_data/Phosphorylation.csv'
-    mp_path = 'breast_cancer_data/matched_phosphorylation_data.csv'
-    mps_path = 'breast_cancer_data/matched_phosphorylation_samples.csv'
-    rnan_path = 'breast_cancer_data/matched_phosphorylation_rnan.csv'
+    phos_path = folder + '/Phosphorylation.csv'
     delimiter = '\t'
 
-    #export_xl_page_to_csv()
-    #output_phoshosite_csv(sub_path, 'breast_cancer_data', delimiter)
-    #remove_rows_with_multisites(bc_path, 'breast_cancer_data', delimiter)
-    #clean_sites_col(phospho_path, 'breast_cancer_data', delimiter)
-    #join_gene_site(p_path, 'breast_cancer_data', delimiter)
-    #phospho_table = table()
-    #phospho_table.initialize_from_file(path=phospho_path, delimiter=delimiter)
-    #print(phospho_table.dataframe.iloc[:3])
-    #sub_table = table()
-    #sub_table.initialize_from_file(path=sub_path, delimiter=delimiter)
-    #print(sub_table.dataframe.iloc[:3])
-    #joined_table = merge_tables('Phosphosite', sub_table, phospho_table, 'breast_cancer_data')
-    #joined_table.sort('Kinase', True)
-    #print(joined_table.dataframe)
-    #Nan_list = joined_table.dataframe.isnull().sum(axis=1).divide(27)
-    #print(Nan_list)
-    #delete_rows_with_fewer_samples(mp_path, 'breast_cancer_data', delimiter)
-    #average_nans(mps_path, 'breast_cancer_data', delimiter)
-    #tmp1 = pd.read_csv(rnan_path, delimiter=delimiter)
-    #merged_table = table()
-    #merged_table.initialize_from_dataframe(tmp1)
-    #tmp2 = pd.read_csv(info_path, delimiter=',')
-    #info_table = table()
-    #info_table.initialize_from_dataframe(tmp2)
-    #df, gene_list = rename_gene_to_original(merged_table, info_table, 'breast_cancer_data', 0)
-    #gene_list = pd.read_csv('breast_cancer_data/matched_gene_list.csv')
-    #match_seq_to_gene_list('data/human_kinase_domain.fasta', gene_list, 'breast_cancer_data')
-    d = compute_dist_matrix_from_file('breast_cancer_data')
+    print('preparing data from xl file...')
+    export_xl_page_to_csv(xl_path=xl_path, output_name=xl_output, output_folder=folder, page_name=xl_page)
 
-def output_phoshosite_csv(sub_path, output_folder, delimiter):
-    df = pd.read_csv(sub_path, delimiter=delimiter)
-    tmp = merge_columns(df, ['Substrate', 'Site'], 'Phosphosite', '-')
-    tmp.dataframe[['Kinase', 'Phosphosite']].to_csv(output_folder + '/Phosphosite.csv', sep='\t', index=False)
+    print('preparing phosphosite data...')
+    dp.merge_sub_site(ksa_path=ksa_path, output_folder=folder, delimiter=delimiter)
 
-def output_breastc_to_csv(phospho_path, output_folder, delimiter):
-    df = pd.read_csv(phospho_path, delimiter=delimiter)
-    tmp = merge_columns(df, ['Gene', 'Site'], 'Phosphosite', '-')
-    tmp.dataframe[2:].to_csv(output_folder + '/Phosphorylation.csv', sep='\t', index=False)
+    print('loading phosphorylation data for clean up...')
+    phos_data = pd.read_csv(filepath_or_buffer=phos_path, delimiter=delimiter)
 
-def remove_rows_with_multisites(phospho_path, output_folder, delimiter):
-    df = pd.read_csv(phospho_path, delimiter=delimiter)
-    df2 = df.copy()
-    split_column(df2, 'variableSites', ' ')
+    print('removing rows with multiple sites...')
+    phos_data = dp.remove_rows_with_multisites(dataframe=phos_data, sites_column='variableSites', delimiter=delimiter)
 
-    for index, row in df2.iterrows():
-        tmp = [x for x in row['variableSites'] if x != '']
-        #print('{}\n{}'.format(df.iloc[index]['variableSites'], row['variableSites']))
+    print('removing rows with nan values on the gene column...')
+    phos_data = dp.remove_rows_with_nan_on_col(dataframe=phos_data, column=['geneSymbol'])
 
-        if len(tmp) != 1:
-            #print('{}\n{}\n{}'.format(index, row['variableSites'], len(row['variableSites'])))
-            df.drop(index, inplace=True)
+    print('striping last character from sites column...')
+    phos_data = strip_last_char(dataframe=phos_data, column='variableSites')
 
-    df.to_csv(output_folder + '/Phosphorylation.csv', sep='\t', index=False)
+    print('generating phosphosites...')
+    phos_data = dp.make_phosphosite_column(dataframe=phos_data, gene_column='geneSymbol', site_column='variableSites', output_folder=folder, delimiter=delimiter)
 
-def clean_sites_col(phospho_path, output_folder, delimiter):
-    #to be called after remove_rows_with_multisites function
-    df = pd.read_csv(phospho_path, delimiter=delimiter)
-    df['variableSites'] = df['variableSites'].apply(remove_char_list)
-    df.to_csv(output_folder + '/Phosphorylation.csv', sep='\t', index=False)
+    print('match phosphosites to substrate table...')
+    sub_data = pd.read_csv(filepath_or_buffer=sub_path, delimiter=delimiter)
+    merged_data = merge_dataframes(columns='Phosphosite', df1=phos_data, df2=sub_data)
 
-def remove_char_list(s):
-    char_list = ['\'', '[', ']', ',', ' ']
-    return re.sub("|".join(char_list), "", s)
+    print('deleting rows with fewer samples...')
+    merged_data = dp.delete_rows_with_fewer_samples(merged_data)
 
-def to_str(list):
-    return ''.join(list)
+    print('averaging nan values...')
+    merged_data = dp.average_nans(merged_data)
 
-def join_gene_site(phospho_path, output_folder, delimiter):
-    df = pd.read_csv(phospho_path, delimiter=delimiter)
-    strip_column(df, 'variableSites', ' ')
-    strip_column(df, 'variableSites', 's')
-    strip_column(df, 'variableSites', 't')
-    strip_column(df, 'variableSites', 'y')
-    strip_column(df, 'variableSites', 'q')
-    strip_column(df, 'variableSites', 'm')
-    print(df['variableSites'])
-    tmp = merge_columns(df, ['geneSymbol','variableSites'], 'Phosphosite', '-')
-    print(tmp.dataframe['Phosphosite'])
-    colnames = tmp.dataframe.columns.tolist()
-    print(colnames)
-    colnames = colnames[-1:] + colnames[:-1]
-    print(colnames)
-    tmp.dataframe = tmp.dataframe[colnames]
-    tmp.dataframe = tmp.dataframe.drop(['geneSymbol', 'variableSites'], axis=1)
-    print(tmp.dataframe)
-    tmp.dataframe.to_csv(output_folder + '/Phosphorylation_data.csv', sep='\t', index=False)
+    print('checking on info table for kinase aliases...')
+    alias_data = pd.read_csv(info_path, delimiter=',')
+    alias_data = alias_data.loc[:, ~alias_data.columns.str.contains('^Unnamed')]
+    df, gene_list = rename_gene_to_original(merged_data, alias_data, 'breast_cancer_data', 0)
 
-def delete_rows_with_fewer_samples(phospho_path, output_folder, delimiter):
-    df = pd.read_csv(phospho_path, delimiter=delimiter)
-    Nan_list = df.isnull().sum(axis=1).divide(27)
+    print('removing kinases with less than 2 substrates...')
+    df, gene_list = dp.remove_k_less_than_2(df, gene_list)
+    df.to_csv(folder + '/matched_phosphorylation.csv', sep='\t', index=False)
+    gene_list.to_csv(folder + '/matched_gene_list.csv', sep='\t', index=False)
 
-    for index, row in df.iterrows():
-        if Nan_list[index] > .5:
-            #print('{}\n{}'.format(df.iloc[index]['Kinase'], row))
-            df.drop(index, inplace=True)
+    print('matching to sequencing data...')
+    match_seq_to_gene_list('data/human_kinase_domain.fasta', gene_list, 'breast_cancer_data')
 
-    df.to_csv(output_folder + '/matched_phosphorylation_samples.csv', sep='\t', index=False)
+    print('computing distance matrix...')
+    d = compute_dist_matrix_from_file(df, gene_list,'breast_cancer_data')
 
-def average_nans(phospho_path, output_folder, delimiter):
-    df = pd.read_csv(phospho_path, delimiter=delimiter)
+    print('ready to compute hierarchical clustering from distance matrix...')
 
-    for index, row in df.iterrows():
-        avg = row[2:].mean()
-        row = row.fillna(avg)
-        df.iloc[index] = row
-
-    print(df)
-
-    df.to_csv(output_folder + '/matched_phosphorylation_rnan.csv', sep='\t', index=False)
-
+    print('preparing data for kmeans...')
+    k_phospho_data = df.drop(['Phosphosite'], axis=1)
+    k_data = dp.get_substrate_mean(phospho_data=k_phospho_data, gene_list=gene_list)
+    k_data.to_csv(folder + '/bc_kmeans_table.csv', sep=delimiter, index=False)
 
 if __name__ == "__main__":
     main()
