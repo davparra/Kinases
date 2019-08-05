@@ -7,17 +7,23 @@ import pandas as pd
 import data_prep as dp
 
 #TODO: rewrite the steps to match the main function
+
 '''
-1.  Export page from Excel file
-2.  Output as csv to speed up the reading
-3.  Remove rows with multisites
-4.  Strip last character from sites
-5.  Delete rows with fewer samples
-6.  Average nan values on each row
-5.  Remove genes with less than 2 substrates
-7.  Match to sequence data
-8.  Compute distance matrix
-9.  Prepare table for Kmeans
+1.  Export page from Excel file and output as csv to speed up the reading
+2.  Prepare phosphosite data
+3.  Load phosphorylation data
+4.  Remove rows with multisites
+5.  Remove rows with nan values on the gene column
+6.  Strip last character from sites
+7.  Join gene and site columns on phosphorylation data
+8.  Match phosphosites to phosphorylation data (find inner join)
+8.  Delete rows with fewer samples
+9.  Average nan values on each row
+10. Fix kinase name with aliases table
+11. Remove genes with less than 2 substrates
+12. Match to sequence data
+13. Compute distance matrix
+14. Prepare table for Kmeans
 '''
 
 def main():
