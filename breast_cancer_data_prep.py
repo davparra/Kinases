@@ -6,8 +6,6 @@ from excel import export_xl_page_to_csv
 import pandas as pd
 import data_prep as dp
 
-#TODO: rewrite the steps to match the main function
-
 '''
 1.  Export page from Excel file and output as csv to speed up the reading
 2.  Prepare phosphosite data

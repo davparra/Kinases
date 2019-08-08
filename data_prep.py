@@ -1,5 +1,6 @@
 import pandas as pd
-from table_methods import merge_dataframes, split_column, merge_columns, strip_last_char
+from table_methods import merge_dataframes, split_column, merge_columns, strip_last_char, split_float_column
+import numpy as np
 
 def merge_sub_site(ksa_path, output_folder, delimiter):
     #merges the substrate and the site to generate the
@@ -15,17 +16,33 @@ def output_breastc_to_csv(phospho_path, output_folder, delimiter):
 
 def remove_rows_with_multisites(dataframe, sites_column, delimiter):
     df = dataframe.copy()
-    split_column(df, sites_column, ' ')
+    split_column(df, sites_column, delimiter)
     df = df[df[sites_column].map(len) == 1]
 
     return df
+
+def remove_rows_with_multiposition(dataframe, sites_column, delimiter):
+    df = dataframe.copy()
+    split_float_column(df, sites_column, delimiter)
+
+    for index, row in df.iterrows():
+        if len(row[sites_column]) != 1:
+            df.drop(index, inplace=True)
+
+    df[sites_column] = df[sites_column].apply(lambda row: str(row[0]))
+    df = df.reset_index(drop=True)
+
+    return df
+
+def list_length(list):
+    return len(list)
 
 def remove_rows_with_nan_on_col(dataframe, column):
     df = dataframe.copy()
     df.dropna(subset=column, how='all', inplace = True)
     return df
 
-def make_phosphosite_column(dataframe, gene_column, site_column, output_folder, delimiter):
+def make_phosphosite_column(dataframe, gene_column, site_column):
     df = dataframe.copy()
     df = merge_columns(df, [gene_column, site_column], 'Phosphosite', '-')
     return df

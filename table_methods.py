@@ -61,7 +61,18 @@ def strip_last_char(dataframe, column):
 def split_column(dataframe, column, char):
     #splits the entries of a column if the entry is a list divided by a character char
     dataframe[column] = dataframe[column].str.split(char)
+
     #remove empty items from list
     dataframe[column] = dataframe[column].apply(lambda row: [x for x in row if x != ''])
 
+    return dataframe
+
+def split_float_column(dataframe, column, char):
+    #splits the entries of a column if the entry is a list divided by a character char
+    dataframe[column] = dataframe[column].str.split(char)
+
+    return dataframe
+
+def lowercase_column(dataframe, column):
+    dataframe[column] = dataframe[column].apply(lambda row: row.str.lower())
     return dataframe

@@ -14,13 +14,8 @@ def main():
     gene_list_path = folder + '/matched_gene_list.csv'
     delimiter = '\t'
 
-    print('loading phosphorylation data to prepare for kmeans...')
-    phospho_data = pd.read_csv(filepath_or_buffer=phos_path, delimiter=delimiter)
-    phospho_data = phospho_data.drop(['Phosphosite'], axis=1)
-    gene_list = pd.read_csv(filepath_or_buffer=gene_list_path, delimiter=delimiter)
-
-    km_data = dp.get_substrate_mean(phospho_data=phospho_data, gene_list=gene_list)
-
+    l = [.1298]
+    print(type(str(l[0])))
 
 if __name__ == "__main__":
     main()
